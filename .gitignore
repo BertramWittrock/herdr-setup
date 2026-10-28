@@ -1,0 +1,17 @@
+# Track only the setup. herdr's own state (session.json, snapshots, logs, sockets) stays on each Mac.
+/*
+!/.gitignore
+!/.gitmodules
+!/README.md
+!/install.sh
+!/config.toml
+!/jump.sh
+!/new-tab.sh
+!/space-filter.py
+!/warp/
+!/keylights/
+/keylights/*
+!/keylights/build.sh
+!/keylights/keylights.py
+!/keylights/razer-keys.c
+!/keylights/librazermacos

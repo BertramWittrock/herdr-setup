@@ -1,0 +1,151 @@
+onboarding = false
+
+[keys]
+# Shift+F12: close the current pane (and the agent in it). No confirmation.
+close_pane = ["prefix+x", "shift+f12"]
+# F12: rename the current tab (the name the sidebar shows for its agent).
+rename_tab = ["prefix+shift+t", "f12"]
+# Move between panes: ctrl+b then an arrow, or ctrl+shift+arrow directly.
+# (ctrl+option+arrow belongs to Rectangle.)
+focus_pane_left = ["prefix+h", "prefix+left", "ctrl+shift+left"]
+focus_pane_down = ["prefix+j", "prefix+down", "ctrl+shift+down"]
+focus_pane_up = ["prefix+k", "prefix+up", "ctrl+shift+up"]
+focus_pane_right = ["prefix+l", "prefix+right", "ctrl+shift+right"]
+
+# F1–F10: focus agent 1–10, in sidebar order.
+
+[[keys.command]]
+key = "f1"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 1"
+description = "focus agent 1"
+
+[[keys.command]]
+key = "f2"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 2"
+description = "focus agent 2"
+
+[[keys.command]]
+key = "f3"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 3"
+description = "focus agent 3"
+
+[[keys.command]]
+key = "f4"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 4"
+description = "focus agent 4"
+
+[[keys.command]]
+key = "f5"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 5"
+description = "focus agent 5"
+
+[[keys.command]]
+key = "f6"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 6"
+description = "focus agent 6"
+
+[[keys.command]]
+key = "f7"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 7"
+description = "focus agent 7"
+
+[[keys.command]]
+key = "f8"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 8"
+description = "focus agent 8"
+
+[[keys.command]]
+key = "f9"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 9"
+description = "focus agent 9"
+
+[[keys.command]]
+key = "f10"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh agent 10"
+description = "focus agent 10"
+
+# Macro keys 1–6 send Shift+F1–F6: focus workspace ("space") 1–6.
+
+[[keys.command]]
+key = "shift+f1"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh workspace 1"
+description = "focus workspace 1"
+
+[[keys.command]]
+key = "shift+f2"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh workspace 2"
+description = "focus workspace 2"
+
+[[keys.command]]
+key = "shift+f3"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh workspace 3"
+description = "focus workspace 3"
+
+[[keys.command]]
+key = "shift+f4"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh workspace 4"
+description = "focus workspace 4"
+
+[[keys.command]]
+key = "shift+f5"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh workspace 5"
+description = "focus workspace 5"
+
+[[keys.command]]
+key = "shift+f6"
+type = "shell"
+command = "$HOME/.config/herdr/jump.sh workspace 6"
+description = "focus workspace 6"
+
+# Shift+F7–F10: new tab (current workspace and folder) running an agent.
+
+[[keys.command]]
+key = "shift+f7"
+type = "shell"
+command = "$HOME/.config/herdr/new-tab.sh claude"
+description = "new Claude Code tab"
+
+[[keys.command]]
+key = "shift+f8"
+type = "shell"
+command = "$HOME/.config/herdr/new-tab.sh cmd"
+description = "new Command Code tab"
+
+[[keys.command]]
+key = "shift+f9"
+type = "shell"
+command = "$HOME/.config/herdr/new-tab.sh opencode"
+description = "new opencode tab"
+
+[[keys.command]]
+key = "shift+f10"
+type = "shell"
+command = "$HOME/.config/herdr/new-tab.sh codex"
+description = "new Codex tab"
+
+# Shift+F11: toggle showing only the current space's agents in the sidebar.
+
+[[keys.command]]
+key = "shift+f11"
+type = "shell"
+command = "/opt/homebrew/bin/python3 -I $HOME/.config/herdr/space-filter.py toggle"
+description = "agents: this space only"
+
+# Sidebar agent rows: agent name first and bold, space and tab underneath.
+[ui.sidebar.agents]
+rows = [["state_icon", { token = "agent", bold = true, dim = false }], ["machine", "workspace", "tab"]]

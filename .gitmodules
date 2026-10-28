@@ -1,0 +1,3 @@
+[submodule "keylights/librazermacos"]
+	path = keylights/librazermacos
+	url = https://github.com/1kc/librazermacos.git

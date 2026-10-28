@@ -1,0 +1,8 @@
+name = "herdr"
+title = "herdr"
+
+[[panes]]
+id = "herdr"
+type = "terminal"
+directory = "~"
+commands = ["herdr"]
