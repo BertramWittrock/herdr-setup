@@ -6,11 +6,11 @@ Context for picking this back up (set up with Claude Code, Oct 2026, herdr 0.9.3
 
 ## Install on another Mac
 
-Needs an Apple Silicon Mac with [Homebrew](https://brew.sh) and the GitHub CLI logged in (`brew install gh && gh auth login`).
+Needs an Apple Silicon Mac with [Homebrew](https://brew.sh).
 
 ```sh
 herdr server stop 2>/dev/null; [ -d ~/.config/herdr ] && mv ~/.config/herdr ~/.config/herdr.old
-gh repo clone BertramWittrock/herdr-setup ~/.config/herdr
+git clone https://github.com/BertramWittrock/herdr-setup.git ~/.config/herdr
 ~/.config/herdr/install.sh
 ```
 
