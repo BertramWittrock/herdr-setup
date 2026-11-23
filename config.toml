@@ -112,6 +112,44 @@ type = "shell"
 command = "$HOME/.config/herdr/jump.sh workspace 6"
 description = "focus workspace 6"
 
+# ctrl+b then Shift+F1–F6: move the current pane (and its agent) to workspace 1–6.
+
+[[keys.command]]
+key = "prefix+shift+f1"
+type = "shell"
+command = "$HOME/.config/herdr/move.sh 1"
+description = "move pane to workspace 1"
+
+[[keys.command]]
+key = "prefix+shift+f2"
+type = "shell"
+command = "$HOME/.config/herdr/move.sh 2"
+description = "move pane to workspace 2"
+
+[[keys.command]]
+key = "prefix+shift+f3"
+type = "shell"
+command = "$HOME/.config/herdr/move.sh 3"
+description = "move pane to workspace 3"
+
+[[keys.command]]
+key = "prefix+shift+f4"
+type = "shell"
+command = "$HOME/.config/herdr/move.sh 4"
+description = "move pane to workspace 4"
+
+[[keys.command]]
+key = "prefix+shift+f5"
+type = "shell"
+command = "$HOME/.config/herdr/move.sh 5"
+description = "move pane to workspace 5"
+
+[[keys.command]]
+key = "prefix+shift+f6"
+type = "shell"
+command = "$HOME/.config/herdr/move.sh 6"
+description = "move pane to workspace 6"
+
 # Shift+F7–F10: new tab (current workspace and folder) running an agent.
 
 [[keys.command]]

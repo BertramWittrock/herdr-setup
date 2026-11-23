@@ -24,6 +24,7 @@ Keep both Macs in sync: after changing something, `cd ~/.config/herdr && git com
 |---|---|
 | F1–F10 | Jump to agent 1–10, in the sidebar's current order |
 | Shift+F1–F6 | Jump to workspace 1–6 (meant for keyboard macro keys) |
+| ctrl+b, then Shift+F1–F6 | Move the current pane (and its agent) to workspace 1–6, as a new tab with the same name. You stay where you are |
 | Shift+F7 / F8 / F9 / F10 | New tab running Claude Code / Command Code (`cmd`) / opencode / Codex |
 | F12 | Rename current tab (built-in prompt; the sidebar shows the tab name) |
 | Shift+F11 | Toggle "this space only": the agent list (and F1–F10) show just the current space, in fixed tab order. F11 lights white while on |
@@ -40,6 +41,7 @@ Typing `herdr` in Spotlight or Raycast opens a new Warp window running herdr.
 | `~/.config/herdr/config.toml` | Keybindings. Check with `herdr config check`, apply with `herdr server reload-config` (or `ctrl+b shift+r`) |
 | `~/.config/herdr/jump.sh` | `agent N` / `workspace N` focus; `agents` prints `pane_id status` in sidebar order (used by keylights) |
 | `~/.config/herdr/space-filter.py` | Shift+F11 toggle; sets/clears a herdr agent view. Mode saved as `~/.local/state/herdr/agents-current-space`; keylights re-applies it after herdr restarts |
+| `~/.config/herdr/move.sh` | `N`: moves the current pane to workspace N (`herdr pane move --new-tab`) |
 | `~/.config/herdr/new-tab.sh` | New tab in the current workspace and folder, then runs the given agent command |
 | `~/.config/herdr/keylights/` | Keyboard lighting: `keylights.py` (watcher), `razer-keys.c` + `build.sh` (USB tool on `librazermacos/`, a git submodule), `keylights.log` |
 | `~/.config/herdr/install.sh` | Sets up a Mac; writes the three files below |
